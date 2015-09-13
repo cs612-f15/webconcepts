@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Dynamically Loading HTML in Division</title>
+<script language="JavaScript" src="loadHtml.js">
+
+</script>
+<style type="text/css">
+#contents {border: 2px solid black;
+           padding: 5px }
+</style>
+</head>
+<body>
+<h2>Dynamically Loading HTML in Division</h2>
+
+<form method="POST">
+<input type="button" name="B1" value="Hello" onclick="document.getElementById('contents').innerHTML='<p>Hello</p>'" /> (contents generated in Browser)<br />
+<input type="button" name="B2" value="Test 1" onclick="loadHtml('test1.html', 'contents')" /> (Contents from Web server)<br />
+<input type="button" name="B4" value="Amazon" onclick="document.getElementById('contents').innerHTML='&lt;iframe src=&quot;http://www.amazon.com&quot; width=&quot;100%&quot; height=&quot;200&quot; scrolling=&quot;yes&quot; frameborder=&quot;yes&quot;&gt;&lt;/iframe&gt;'" /> (Contents from Web server into IFrame)<br />
+</form>
+
+<a href="#self" onclick='loadHtml("http://localhost:8080/html/test1.html", "contents")'>Test 1</a> (load with hyperlink)<br />
+
+<h3>Contents Display Area:</h3>
+<div id="contents">
+<p>Contents to be replaced.</p>
+</div>
+
+<h2>Load Contents in Inline Frame</h2>
+
+<p>
+<a href="#self" onclick="frames['IFrameName'].location.href='http://csis.pace.edu/~lixin'">Load Prof. Lixin Tao's Web site into the following inline frame:</a> <br />
+<a href="#self" onclick="frames['IFrameName'].location.href='http://www.amazon.com'">Load Amazon's Web site into the following inline frame:</a> </p>
+<iframe name="IFrameName" frameborder="yes" width="100%" height="200" scrolling="yes" />
+
+</body>
+</html>
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+  Formatting Selected Text or Contents with Span and Div 4
+</title>
+<style>
+#id1 {color: red; text-decoration: underline}
+.keyword {color: blue; font-style: italic}
+#ajax .keyword {color: green; font-style: italic}
+#intro {border: 4px blue outset; 
+        margin: 10px; padding:5px}
+#ajax {border: 4px blue inset; 
+        margin: 10px; padding: 5px}
+
+#intro {position: relative; left: 0px; 
+        width: 150px}
+#ajax {position: relative; left: 170px; 
+        width: 150px}
+</style>
+</head>
+<body>
+<div id="intro">
+<h3>Introduction</h3>
+<p>This course introduces you to the 
+<span id="id1">fundamental concepts</span> 
+underpinning the latest IT technologies like 
+<span class="keyword">Ajax</span> and 
+<span class="keyword">Service-Oriented 
+Architecture</span>.
+</p>
+</div>
+<div id="ajax">
+<h3>What is Ajax?</h3>
+<p>Ajax supports <span class="keyword">incremental 
+update</span> of a Web page thus improves the 
+responsiveness of Web applications.</p>
+</div>
+</body>
+</html>

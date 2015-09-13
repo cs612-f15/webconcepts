@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>AJAX Example</title>
+    <script language="JavaScript">
+        
+    var request = false;
+    
+    function sendAjaxRequest(targetUrl) {
+      // Set request object based on browser type
+      if (window.XMLHttpRequest)
+        request = new XMLHttpRequest();
+      else if (window.ActiveXObject) 
+        request = new ActiveXObject("Microsoft.XMLHTTP");
+        
+      if (request) {
+        // Send an HTTP POST request to targetUrl in asychronous mode
+        request.open("POST", targetUrl, true); // true: asynchronous invocation
+        // Register function readyStateProcessing() as event listener   
+        request.onreadystatechange = readyStateProcessing;
+        // Send the HTTP request without auguments; arguments could be like "a=1&b=2"
+        request.send("");
+      }
+    }
+
+    function readyStateProcessing() {
+      //request states: 2: no response yet; 3: partial response received; 
+      // 4: all response data received
+      // If all response data have arrived and request status is OK
+      if ((request.readyState == 4) && (request.status == 200)) {
+        var contentElement = document.getElementById("ajaxTarget");
+        contentElement.innerHTML = request.responseText;                
+      }
+    }    
+    </script>
+</head>
+
+<body>
+  <p>
+    Current stock price for RBI:
+    <span id="ajaxTarget" style="font-size: x-large">25</span>
+  </p>
+    
+  <p>
+    <button onclick='sendAjaxRequest("stockGenerator")'>Update Stock Price</button>
+  </p>
+</body>
+</html>

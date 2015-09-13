@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- this is a comment -->
+<!-- TODO: show a script font -->
+<!-- TODO: show a list with colors -->
+<!-- TODO: show a script font -->
+
+<head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<style>
+		inssput {
+			display: block;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="container">
+	<form action="http://community.seidenberg.pace.edu:8080/demo/echo" method="get">
+		<div class="form-group">
+			<label for="userName">Your Name</label>
+			<input type="text" name="name" id="userName" placeholder="John Smith">
+		</div>
+		<div class="form-group">
+			<label>What team?
+				<input type="text" name="team" placeholder="Team you like">
+			</label>
+		</div>
+		<div class="form-group">
+			<label>What State?
+				<input type="text" name="state" placeholder="State in US">
+			</label>
+		</div>
+		<div class="form-group">
+			<label>
+				<input type="radio" name="cardType" value="Visa">Visa</label>
+			<label>
+				<input type="radio" name="cardType" value="MC">Master Card</label>
+			<label>
+				<input type="radio" name="cardType" value="AMEX">American Express</label>
+		</div>
+		<div class="form-group">
+			<label>
+				<input type="checkbox" name="sku" value="4x25">Four 25 watt bulbs</label>
+			<label>
+				<input type="checkbox" name="sku" value="8x25">Eight 25 watt bulbs</label>
+			<label>
+				<input type="checkbox" name="sku" value="4x25LongLife">Four 25 watt Long Life</label>
+			<label>
+				<input type="checkbox" name="sku" value="8x25LongLife">Eight 25 watt Long Life</label>
+				
+		</div>
+		<div class="form-group">
+			<input type="submit">
+		</div>
+	</form>
+	</div>
+</body>
+
+</html>
