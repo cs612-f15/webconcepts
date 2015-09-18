@@ -1,0 +1,32 @@
+// Override Bootstrap Link syles
+a {
+    color: $link-color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        @include tab-focus;
+    }
+}
+
+hr {
+    margin-top: spacing(sm);
+    margin-bottom: 0;
+    @media (min-width: $screen-sm) {
+        margin-top: spacing(md);
+    }
+
+    //
+    // Colors
+    //
+
+    // Default colors
+    border-color: $color-neutral-low;
+
+    // Alt theme
+    &.theme-alt {
+        border-color:  $color-neutral-low-alt;
+    }
+}
