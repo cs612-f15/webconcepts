@@ -1,0 +1,86 @@
+﻿#glyphs {
+    span[class*="glyph-"] {
+        font-size: 2em;
+    }
+}
+
+.color {
+    height: 0;
+    padding-bottom: 39px;
+    margin: spacing(xxs) 0 0;
+}
+
+.line {
+    border-width: 4px;
+    border-style: solid;
+    padding-bottom: 29px;
+}
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: none;
+    border-left: 8px solid $pre-border-color;
+    margin: spacing(xxs) 0 0;
+    @include type(t8);
+}
+
+code {
+    .tag {
+        color: #008080;
+
+        .title {
+            color: #800000;
+        }
+    }
+
+    .value, .string {
+        color: #0451A5;
+    }
+
+    .attribute {
+        color: red;
+    }
+
+    .comment {
+        color: #008000;
+        font-style: italic;
+    }
+
+    .number {
+        color: #09885A;
+    }
+}
+
+.caption-style-example {
+    font-size: 6.67vh;
+    background: rgba(black, .5) !important;
+    color: white;
+}
+
+//make it possible to see alt colors in docs
+#alt-colors > .col-sm-6 {
+    background-color: $color-type-primary;
+}
+
+
+.nav a, .section-title a {
+    text-decoration: none;
+}
+
+#tiles > .row > .col-md-3 {
+    margin-right: 8px;
+}
+
+.example-dark-image-bg {
+    background-image: url('../images/example_dark.jpg');
+    background-position: top left;
+    background-size: cover;
+}
+
+.example-light-image-bg {
+    background-image: url('../images/example_light.jpg');
+    background-position: top right;
+    background-size: cover;
+}
