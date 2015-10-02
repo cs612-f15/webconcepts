@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/node_modules/angular/angular.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>my controller</p>
+    <div ng-controller="GreetingController">
+        {{ greeting }}
+    </div>
+    </div>
+    <script src="/app.js"></script>
+
+  </body>
+</html>
