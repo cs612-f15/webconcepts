@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title><%= title %></title>
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='//ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.css' />
+
+    <!-- adding jquery and bootstrap here -->
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.js"></script>
+    
+    <!-- angular from local here -->
+    <script src="/node_modules/angular/angular.js"></script>
+    
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>my controller</p>
+    <div ng-controller="GreetingController">
+        {{ greeting }}
+    </div>
+    <p>Build your HTML here...</p>
+
+
+    <!-- good practice is your scripts down here -->
+    <script src="/app.js"></script>
+
+  </body>
+</html>
